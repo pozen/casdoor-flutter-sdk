@@ -68,8 +68,8 @@ class CasdoorFlutterSdkDesktop extends CasdoorFlutterSdkPlatform {
 
       final webview = await WebviewWindow.create(
         configuration: CreateConfiguration(
-          windowWidth: 400,
-          windowHeight: 640,
+          windowWidth: 410,
+          windowHeight: 650,
           title: 'Login',
           titleBarTopPadding: Platform.isMacOS ? 30 : 0,
           titleBarHeight: 0,
@@ -83,6 +83,7 @@ class CasdoorFlutterSdkDesktop extends CasdoorFlutterSdkPlatform {
           if (uri.scheme == params.callbackUrlScheme) {
             returnUrl = requestUrl;
             webview.close();
+            isWindowOpen = false;
             isWindowClosed.complete(returnUrl);
           }
         })
