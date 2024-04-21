@@ -18,6 +18,7 @@ The following platforms are supported:
 - macOS
 - Web
 - Windows
+- a
 
 | **Android**                    | **iOS**                | **Web**                |
 | ------------------------------ | ---------------------- | ---------------------- |
