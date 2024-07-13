@@ -76,7 +76,7 @@ class _FullScreenAuthPageState extends State<FullScreenAuthPage> {
     return Stack(
       children: [
         InAppWebView(
-          initialUrlRequest: URLRequest(url: Uri.parse(widget.params.url)),
+          initialUrlRequest: URLRequest(url: WebUri(widget.params.url)),
           initialOptions: InAppWebViewGroupOptions(
             crossPlatform: InAppWebViewOptions(
               userAgent:
@@ -207,7 +207,7 @@ class CasdoorFlutterSdkMobile extends CasdoorFlutterSdkPlatform {
     });
 
     await browser.openUrlRequest(
-      urlRequest: URLRequest(url: Uri.parse(params.url)),
+      urlRequest: URLRequest(url: WebUri(params.url)),
       options: InAppBrowserClassOptions(
         inAppWebViewGroupOptions: InAppWebViewGroupOptions(
           crossPlatform: InAppWebViewOptions(
